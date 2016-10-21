@@ -8,6 +8,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -121,7 +122,8 @@ public class ResultActivity extends Activity {
         alertDialog.setMessage("Your Score is " + Float.valueOf(String.valueOf(value1)) + "\n" + "Passing score is 70");
         alertDialog.setIcon(R.drawable.quizicon);
         alertDialog.setNegativeButton("Exit", new C02593());
-        alertDialog.setPositiveButton("Restart", new C02604());
+
+                alertDialog.setPositiveButton("Restart", new C02604());
         dialog = alertDialog.create();
         dialog.show();
         btn2 = dialog.getButton(-1);
