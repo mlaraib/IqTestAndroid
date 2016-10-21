@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="sofit.com.iqtest.level1">
+
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/main_timer_bar"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/main_timer_bar"
+        android:layout_alignTop="@id/main_timer_bar"
+        android:layout_alignRight="@id/main_timer_bar"
+        android:layout_alignBottom="@id/main_timer_bar"
+        android:gravity="center"
+        android:id="@+id/main_timer_text"
+        android:text="222222222222"
+        android:textColor="#fff"
+    />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_timer_text"
+        android:text="222"
+        android:textSize="16dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#fff"
+        android:id="@+id/textView1"
+        />
+
+
+    <RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/textView1"
+    android:id="@+id/radioGroup1">
+
+    <android.support.v7.widget.AppCompatRadioButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/radio0"
+    android:checked="true"
+    app:buttonTint="@color/your_color"
+    />
+
+    <android.support.v7.widget.AppCompatRadioButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/radio1"
+    app:buttonTint="@color/your_color"/>
+
+    <android.support.v7.widget.AppCompatRadioButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/radio2"
+    app:buttonTint="@color/your_color"/>
+
+    <android.support.v7.widget.AppCompatRadioButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/getCheckedRadioButtonId"
+    app:buttonTint="@color/your_color"
+    android:visibility="gone"/>
+
+</RadioGroup>
+
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btnnext"/>
+
+
+    </RelativeLayout>
