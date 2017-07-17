@@ -1,4 +1,4 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 import android.content.ContentValues;
 import android.content.Context;

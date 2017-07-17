@@ -1,11 +1,10 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,11 +12,13 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import com.grovelet.iq.quiz.bestiqquiz.R;
 
 public class level5 extends Activity {
     String[] ANS;
@@ -57,6 +58,8 @@ public class level5 extends Activity {
                     b.putInt("score", level5.this.score);
                     intent1.putExtras(b);
                     level5.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level5.this.finish();
                 }
             }
@@ -121,6 +124,8 @@ public class level5 extends Activity {
             System.out.println("score" + level5.this.score);
             intent.putExtras(b);
             level5.this.startActivity(intent);
+            MainActivity.ads.showInterstitial(false);
+
             level5.this.finish();
         }
     }

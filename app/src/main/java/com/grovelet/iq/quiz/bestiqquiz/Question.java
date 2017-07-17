@@ -1,4 +1,4 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 /**
  * Created by iamla on 10/19/2016.

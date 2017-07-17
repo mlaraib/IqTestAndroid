@@ -1,8 +1,7 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -12,6 +11,9 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+
+import com.grovelet.iq.quiz.bestiqquiz.R;
 
 public class levels extends Activity {
     public SharedPreferences preferences;
@@ -37,6 +39,10 @@ public class levels extends Activity {
         Level1.setTypeface(font);
         Button Level2 = (Button) findViewById(R.id.button2);
         Level2.setTypeface(font);
+
+        RelativeLayout adView = (RelativeLayout) findViewById(R.id.adViewCon);
+        MainActivity.ads.loadBanner(adView);
+
         if (LoadPreferences("1", "no").equals("yes")) {
             Level2.setBackgroundResource(R.drawable.lock_bttn);
             Level2.setText("2");
@@ -135,10 +141,11 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level1.class);
-                intent.putExtra("level",1);
+                Intent intent = new Intent(levels.this, level1.class);
+                intent.putExtra("level", 1);
                 startActivity(intent);
                 finish();
+                MainActivity.ads.showInterstitial(false);
 
 
             }
@@ -146,11 +153,13 @@ public class levels extends Activity {
         Level2.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(levels.this, level1.class);
-                if(LoadPreferences("1","no").equals("yes")){
-                    intent.putExtra("level",2);
+                Intent intent = new Intent(levels.this, level1.class);
+                if (LoadPreferences("1", "no").equals("yes")) {
+                    intent.putExtra("level", 2);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
             }
         });
@@ -159,11 +168,13 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level1.class);
-                if(LoadPreferences("2","no").equals("yes")){
-                    intent.putExtra("level",3);
+                Intent intent = new Intent(levels.this, level1.class);
+                if (LoadPreferences("2", "no").equals("yes")) {
+                    intent.putExtra("level", 3);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
 
             }
@@ -173,11 +184,13 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level1.class);
-                if(LoadPreferences("3","no").equals("yes")){
-                    intent.putExtra("level",4);
+                Intent intent = new Intent(levels.this, level1.class);
+                if (LoadPreferences("3", "no").equals("yes")) {
+                    intent.putExtra("level", 4);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
 
             }
@@ -187,11 +200,13 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level5.class);
-                if(LoadPreferences("4","no").equals("yes")){
-                    intent.putExtra("level",5);
+                Intent intent = new Intent(levels.this, level5.class);
+                if (LoadPreferences("4", "no").equals("yes")) {
+                    intent.putExtra("level", 5);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
 
             }
@@ -201,11 +216,13 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level6.class);
-                if(LoadPreferences("4", "no").equals("yes")) {
-                    intent.putExtra("level",6);
+                Intent intent = new Intent(levels.this, level6.class);
+                if (LoadPreferences("4", "no").equals("yes")) {
+                    intent.putExtra("level", 6);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
 
             }
@@ -215,12 +232,16 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level7.class);
-                if(LoadPreferences("4", "no").equals("yes")) {
-                    intent.putExtra("level",7);
+                Intent intent = new Intent(levels.this, level7.class);
+                if (LoadPreferences("4", "no").equals("yes")) {
+                    intent.putExtra("level", 7);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
+
                 }
+
 
             }
         });
@@ -229,11 +250,13 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level8.class);
-                if(LoadPreferences("4", "no").equals("yes")) {
-                    intent.putExtra("level",8);
+                Intent intent = new Intent(levels.this, level8.class);
+                if (LoadPreferences("4", "no").equals("yes")) {
+                    intent.putExtra("level", 8);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
 
             }
@@ -243,11 +266,13 @@ public class levels extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent= new Intent(levels.this, level9.class);
-                if(LoadPreferences("4", "no").equals("yes")) {
-                    intent.putExtra("level",9);
+                Intent intent = new Intent(levels.this, level9.class);
+                if (LoadPreferences("4", "no").equals("yes")) {
+                    intent.putExtra("level", 9);
                     startActivity(intent);
                     finish();
+                    MainActivity.ads.showInterstitial(false);
+
                 }
 
             }
@@ -260,7 +285,6 @@ public class levels extends Activity {
 //        Level7.setOnClickListener(this);
 //        Level8.setOnClickListener(this);
 //        Level9.setOnClickListener(this);
-
 
 
     }

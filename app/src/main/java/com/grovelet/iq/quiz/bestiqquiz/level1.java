@@ -1,4 +1,4 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -6,12 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,11 +17,14 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import com.grovelet.iq.quiz.bestiqquiz.R;
 
 public class level1 extends Activity {
     static boolean boolean1;
@@ -77,6 +78,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 1);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 2 && level1.this.time == 80 && !level1.boolean1) {
@@ -87,6 +90,8 @@ public class level1 extends Activity {
                     System.out.println("scoreInTime" + level1.this.score);
                     intent1.putExtra("level", 2);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 3 && level1.this.time == 70 && !level1.boolean1) {
@@ -96,6 +101,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 3);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 4 && level1.this.time == 60 && !level1.boolean1) {
@@ -105,6 +112,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 4);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 5 && level1.this.time == 50 && !level1.boolean1) {
@@ -123,6 +132,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 6);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 7 && level1.this.time == 30 && !level1.boolean1) {
@@ -132,6 +143,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 7);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 8 && level1.this.time == 20 && !level1.boolean1) {
@@ -141,6 +154,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 8);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
                 if (this.val$level == 9 && level1.this.time == 10 && !level1.boolean1) {
@@ -150,6 +165,8 @@ public class level1 extends Activity {
                     intent1.putExtras(b);
                     intent1.putExtra("level", 9);
                     level1.this.startActivity(intent1);
+                    MainActivity.ads.showInterstitial(false);
+
                     level1.this.finish();
                 }
             }

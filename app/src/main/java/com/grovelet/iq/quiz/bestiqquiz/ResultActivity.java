@@ -1,4 +1,4 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,8 +11,9 @@ import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.Menu;
 import android.widget.Button;
+
+import com.grovelet.iq.quiz.bestiqquiz.R;
 
 
 public class ResultActivity extends Activity {
@@ -39,6 +40,8 @@ public class ResultActivity extends Activity {
 
         public void onClick(DialogInterface dialog, int which) {
             ResultActivity.this.startActivity(new Intent(ResultActivity.this, levels.class));
+            MainActivity.ads.showInterstitial(false);
+
             ResultActivity.this.finish();
         }
     }
@@ -50,6 +53,8 @@ public class ResultActivity extends Activity {
 
         public void onClick(DialogInterface dialog, int which) {
             ResultActivity.this.startActivity(new Intent(ResultActivity.this, levels.class));
+            MainActivity.ads.showInterstitial(false);
+
             ResultActivity.this.finish();
         }
     }
@@ -63,6 +68,8 @@ public class ResultActivity extends Activity {
             Intent game3 = new Intent(ResultActivity.this, level1.class);
             game3.putExtra("level", ResultActivity.this.getIntent().getIntExtra("level", 1));
             ResultActivity.this.startActivity(game3);
+            MainActivity.ads.showInterstitial(false);
+
             ResultActivity.this.finish();
         }
     }
@@ -96,7 +103,7 @@ public class ResultActivity extends Activity {
 
             SavePreferences(String.valueOf(level), "yes");
             alertDialog.setTitle("Congrats!!!");
-            alertDialog.setCancelable(false);
+            alertDialog.setCancelable(true);
             alertDialog.setMessage("Your Score: " + Float.valueOf(String.valueOf(value1)));
             alertDialog.setIcon(R.drawable.quizicon);
             alertDialog.setPositiveButton("Next Level", new C02571());
@@ -106,11 +113,13 @@ public class ResultActivity extends Activity {
             btn2 = dialog.getButton(-1);
             if (btn2 != null) {
                 btn2.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn));
+                btn2.setTextColor(Color.WHITE);
             }
             btn2.setTextSize(20);
             btn1 = dialog.getButton(-3);
             if (btn1 != null) {
                 btn1.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn));
+                btn1.setTextColor(Color.WHITE);
             }
             btn1.setTextSize(20);
             return;
@@ -118,9 +127,10 @@ public class ResultActivity extends Activity {
         alertDialog = new Builder(this);
         alertDialog.setTitle("blue");
         alertDialog.setTitle("Sorry Try Again");
-        alertDialog.setCancelable(false);
+        alertDialog.setCancelable(true);
         alertDialog.setMessage("Your Score is " + Float.valueOf(String.valueOf(value1)) + "\n" + "Passing score is 70");
         alertDialog.setIcon(R.drawable.quizicon);
+
         alertDialog.setNegativeButton("Exit", new C02593());
 
                 alertDialog.setPositiveButton("Restart", new C02604());
@@ -129,11 +139,15 @@ public class ResultActivity extends Activity {
         btn2 = dialog.getButton(-1);
         if (btn2 != null) {
             btn2.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn));
+            btn2.setTextColor(Color.WHITE);
+
         }
         btn2.setTextSize(20);
         btn1 = dialog.getButton(-2);
         if (btn1 != null) {
             btn1.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn));
+            btn1.setTextColor(Color.WHITE);
+
         }
         btn1.setTextSize(20);
     }

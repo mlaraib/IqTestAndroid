@@ -1,4 +1,4 @@
-package sofit.com.iqtest;
+package com.grovelet.iq.quiz.bestiqquiz;
 
 import java.util.BitSet;
 import java.util.Random;

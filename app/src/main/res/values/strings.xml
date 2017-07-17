@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">IQ Test</string>
+    <string name="app_name">IQ Test 2017</string>
     <string name="title_activity_level9">level9</string>
+
+
+    <string name="analytics_id">UA-60563114-1</string>
+    <string name="admob_appID">ca-app-pub-3478891142471061~4428807839</string>
+    <string name="admob_video">ca-app-pub-3478891142471061/7382274234</string>
+    <string name="ad_unit_id_interstitial">ca-app-pub-3478891142471061/7382274234</string>
+    <string name="banner_AdMob">ca-app-pub-3478891142471061/2812473835</string>
+    <string name="startApp">211639846</string>
+    <string name="admob_small_native">ca-app-pub-3478891142471061/8719406639</string>
+
+
+    <string name="facebook_app_id"></string>
+    <string name="inter_fb"></string>
+    <string name="banner_fb"></string>
 </resources>
